@@ -2,3 +2,77 @@
     This file is for the section related to row 1 column 1 of the portfolio categories
 -->
 
+    <section>
+        <h2>Project Overview</h2>
+        <p>
+            This project involves designing and implementing a 16-bit Central Processing Unit (CPU) using VHDL. The CPU includes an ALU with arithmetic, logic, and shifting capabilities, data and instruction memory, three 16-bit registers, a control unit, and a 4-to-1 multiplexer.
+        </p>
+        <h3>Key Features</h3>
+        <ul>
+            <li>Arithmetic operations: Addition, subtraction, multiplication, and increment.</li>
+            <li>Logical operations: AND, OR, XOR, XNOR, NOR, and NAND.</li>
+            <li>Shifting and rotating capabilities: Shift left, shift right, rotate left, and rotate right.</li>
+            <li>Instruction memory with a 24-bit instruction set.</li>
+            <li>Control unit for enabling execution and reset states.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Design Details</h2>
+        <p>
+            The CPU operates with two 16-bit data inputs, a 24-bit instruction input, and a clock signal. Outputs include a 16-bit data output, a 17-bit data memory output, and a carry-out signal for arithmetic operations.
+        </p>
+        <p>
+            Instructions are executed in three cycles:
+        </p>
+        <ol>
+            <li>Fetch: Load the instruction into the instruction register.</li>
+            <li>Decode: Determine the operation to execute.</li>
+            <li>Execute: Perform the operation based on the decoded instruction.</li>
+        </ol>
+        <h3>ALU Operations</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mode</th>
+                    <th>Opcode</th>
+                    <th>Operation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>000</td>
+                    <td>A NOR B</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>000</td>
+                    <td>A * B</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>011</td>
+                    <td>Increment A</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Test Bench Results</h2>
+        <p>
+            The test bench demonstrates the CPU's functionality, including load, ALU operations, memory read/write, and program execution cycles. Highlights include:
+        </p>
+        <ul>
+            <li>Successful addition and subtraction operations.</li>
+            <li>Proper instruction decoding and execution.</li>
+            <li>Memory read and write validations.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <a href="portfolio.html">Back to Portfolio</a>
+    </footer>
+
