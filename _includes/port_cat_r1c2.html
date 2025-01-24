@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed information about the 16-bit ALU design project.">
+    <title>Portfolio - 16-Bit ALU Design</title>
+    <link rel="stylesheet" href="path/to/your/styles.css">
+</head>
+<body>
+    <header>
+        <h1>16-Bit ALU Design</h1>
+        <p>By Ruben Ramirez</p>
+    </header>
+
+    <div class="container">
+        <h2>Project Overview</h2>
+        <p>
+            This project involves designing and implementing a 16-bit Arithmetic Logic Unit (ALU) using VHDL. 
+            The ALU includes arithmetic, logic, and shifting units. It uses two 16-bit data inputs (A and B), 
+            a 1-bit mode input to select operation groups, and a 3-bit opcode to determine the specific operation. 
+            Outputs include a 16-bit result (`ALU Out`) and a carry-out (`Cout`).
+        </p>
+        <h3>Key Features</h3>
+        <ul>
+            <li>Arithmetic operations: Multiplication, addition, subtraction, and increment.</li>
+            <li>Logical operations: NOR, NAND, OR, AND, XOR, XNOR, NOT A, and NOT B.</li>
+            <li>Shifting operations: Shift left, shift right, rotate left, and rotate right.</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>ALU Design</h2>
+        <p>
+            The ALU uses several components, including an arithmetic unit, a logical unit, a shifter unit, and multiple 2:1 multiplexers. 
+            The controller manages data flow based on the `mode` and `opcode` inputs. The system is structured to execute operations 
+            based on the following control values:
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mode</th>
+                    <th>Opcode</th>
+                    <th>Operation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>000</td>
+                    <td>A NOR B</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>001</td>
+                    <td>A NAND B</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>000</td>
+                    <td>A * B</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>011</td>
+                    <td>Increment A</td>
+                </tr>
+                <!-- Additional rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h2>Test Bench and Results</h2>
+        <p>
+            The test bench simulates all 16 operations of the ALU. Key highlights include:
+        </p>
+        <ul>
+            <li>Successful execution of logical operations like NOR and AND.</li>
+            <li>Arithmetic operations including addition and multiplication.</li>
+            <li>Shifting operations such as shift left and rotate right.</li>
+        </ul>
+        <p>
+            The test bench output confirms the ALU performs accurately based on mode and opcode combinations.
+        </p>
+    </div>
+
+    <footer>
+        <a href="portfolio.html">Back to Portfolio</a>
+    </footer>
+</body>
+</html>
