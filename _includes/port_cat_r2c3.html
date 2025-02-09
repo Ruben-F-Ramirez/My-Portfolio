@@ -1,21 +1,87 @@
 <!--  
-    This file is for the section related to row 2 column 3 of the projects categories
+    This file is for the section related to row 2 column 3 of the portfolio categories
 -->
 
 <section id="port_cat_r2c3">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="section-heading">Verilog Projects</h1>
+                <h1 class="section-heading">Floating-Point Processing Unit (FPU)</h1>
                 <hr class="primary">
             </div>
         </div>
     </div>
     
-    <div class="container">
-                <a href="https://github.com/Ruben-F-Ramirez/Seq_and_or">
-                    <i class="fa-brands fa-github fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                </a>            
+    <div class="container text-center">
+        <a href="https://github.com/Ruben-F-Ramirez/FPU" target="_blank">
+            <i class="fa-brands fa-github fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+        </a>            
     </div>
 
+    <div class="container">
+        <h2>Project Overview</h2>
+        <p>
+            This project involves designing and implementing a Floating-Point Processing Unit (FPU) using Verilog. 
+            The FPU is modular and supports multiple cores for parallel processing, performing floating-point arithmetic operations 
+            such as addition, subtraction, and multiplication.
+        </p>
+        <h3>Key Features</h3>
+        <ul>
+            <li>Modular architecture supporting multi-core processing.</li>
+            <li>Floating-point arithmetic operations: Addition, subtraction, and multiplication.</li>
+            <li>Dedicated shift registers for efficient pipelining.</li>
+            <li>Integrated timing control for managing enable and valid signals.</li>
+            <li>Supports sequential and parallel execution models.</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Design Details</h2>
+        <p>
+            The FPU consists of multiple key modules, each responsible for a specific task in floating-point computation:
+        </p>
+        <ul>
+            <li><strong>FP_adder_13ccs</strong>: A 13-cycle floating-point adder.</li>
+            <li><strong>FP_multiplier_10ccs</strong>: A 10-cycle floating-point multiplier.</li>
+            <li><strong>FP_subtractor_13ccs</strong>: A 13-cycle floating-point subtractor.</li>
+            <li><strong>FP_datapath</strong>: Integrates the ALU components to process floating-point operations sequentially.</li>
+            <li><strong>fppu</strong>: Instantiates two FPU cores for parallel floating-point processing.</li>
+            <li><strong>quad_core</strong>: Instantiates four FPU cores for high-performance operations.</li>
+            <li><strong>shift13_register</strong>: A 13-stage shift register used for pipelining.</li>
+            <li><strong>shift23_register</strong>: A 23-stage shift register for longer pipeline processing.</li>
+            <li><strong>timing_ctl</strong>: Manages enable signals, valid signals, and operation timing.</li>
+            <li><strong>fpu</strong>: The top-level module integrating all submodules into a fully functional Floating-Point Processing Unit.</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Simulation & Testing</h2>
+        <p>
+            The FPU is tested using simulation tools such as ModelSim and Vivado to verify the correctness of its computations. 
+            The testing process includes:
+        </p>
+        <ul>
+            <li>Verifying the accuracy of floating-point addition, subtraction, and multiplication.</li>
+            <li>Ensuring correct operation timing and pipeline delays.</li>
+            <li>Validating enable and valid signal management within the timing control module.</li>
+            <li>Confirming proper execution of both single-core and multi-core FPU designs.</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Repository & Usage</h2>
+        <p>
+            The full Verilog implementation and documentation for this project are available on 
+            <a href="https://github.com/Ruben-F-Ramirez/FPU" target="_blank">GitHub</a>.
+        </p>
+        <p>To clone the repository, use the following command:</p>
+        <pre><code>git clone https://github.com/Ruben-F-Ramirez/FPU</code></pre>
+    </div>
+
+    <div class="container">
+        <footer>
+            <a class="page-scroll" href="#portfolio">Back to Portfolio</a>
+        </footer>
+        <hr class="primary">
+    </div>
 </section>
